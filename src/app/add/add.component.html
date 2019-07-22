@@ -1,0 +1,39 @@
+<form [formGroup]="userRegistration" (ngSubmit)="showValues()">
+    <h4>Add New Form</h4>
+    <div class="form-group">
+      <label for="text">Name</label>
+      <input type="text" class="form-control" formControlName="name">
+      <p class="invalid" *ngIf="userRegistration.controls.name.invalid && userRegistration.controls.name.dirty">
+            name is required
+        </p>
+    </div>
+   
+   
+    <div class="form-group">
+            <label for="text">Comapany</label>
+            <input type="text" class="form-control"  formControlName="company">
+            <p class="invalid" *ngIf="userRegistration.controls.company.invalid && userRegistration.controls.company.dirty">
+                    Comapny Name  is required
+                </p>  
+        </div>
+
+
+          <div class="form-group">
+                <label for="text">Address</label>
+                <input type="text" class="form-control" formControlName="address">
+                <p class="invalid" *ngIf="userRegistration.controls.address.invalid && userRegistration.controls.address.dirty">
+                      Address is required
+                    </p>  
+              </div>
+              <div class="form-group">
+                    <label for="text">Phone</label>
+                    <input type="text" class="form-control" formControlName="phone" >
+                    <p class="invalid" *ngIf="userRegistration.controls.phone.invalid && userRegistration.controls.phone.dirty">
+                            Comapny Name  is required
+                        </p>  
+                  </div>
+   
+    <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="button" class="btn btn-danger" (click)="reset()">Reset</button>
+  </form>
+  

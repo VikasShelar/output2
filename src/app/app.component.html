@@ -1,0 +1,34 @@
+<nav class="navbar navbar-dark bg-primary">
+ Company DataBase
+</nav>
+
+
+<div class="container">
+  <table class="table table-striped">
+    <thead>
+        <tr class="table-success">
+          <th>Name</th>
+          <th>Company</th>
+          <th>Address</th>
+          <th>Phone</th>
+          
+        </tr>
+    </thead>
+    <tbody class="table-success">
+      <tr *ngFor="let character of companyDb">
+          <td>{{ character.name }}</td>
+        <td>{{ character.company }}</td>
+        <td>{{ character.address }}</td>
+        <td>{{ character.phone }}</td>
+        <button type="button" class="btn btn-success" routerLink="add">Add</button>&nbsp;&nbsp;
+      <button type="button" class="btn btn-info" routerLink="edit">Edit</button>&nbsp;&nbsp;
+      <button type="button" class="btn btn-danger">Delete</button>
+      </tr>
+    
+      
+    </tbody>
+   
+  </table>
+  
+</div>
+<router-outlet></router-outlet>
